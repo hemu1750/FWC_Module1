@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackege{
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+
+\noindent
+\textbf{Q.18} \quad Let \( f \) be a real-valued function of a real variable defined as 
+\[
+f(x) = x - \lfloor x \rfloor,
+\]
+where \( \lfloor x \rfloor \) denotes the largest integer less than or equal to \( x \). The value of 
+\[
+\int_{0.25}^{1.25} f(x) \, dx
+\]
+is
+
+Given:
+$ f(x) = x - [x], \quad [x] \ \text{is the greatest integer} \ \le x
+We need:
+\int_{0.25}^{1.25} f(x) \, dx
+Step 1 — Understanding f(x)
+ • x - [x] is the fractional part of x, denoted \{x\}.
+ • \{x\} \in [0,1).
+ • It repeats in each interval [n, n+1).
+Step 2 — Splitting the Interval
+
+The interval [0.25, 1.25] crosses the integer 1, so split at x = 1:
+\int_{0.25}^{1.25} f(x) \, dx
+= \int_{0.25}^{1} f(x) \, dx + \int_{1}^{1.25} f(x) \, dx
+
+Step 3 — First Interval [0.25, 1)
+
+For 0.25 \le x < 1:
+[x] = 0 \quad \Rightarrow \quad f(x) = x
+So:
+\int_{0.25}^{1} x \, dx = \left[ \frac{x^2}{2} \right]_{0.25}^{1}
+= \frac{1^2}{2} - \frac{(0.25)^2}{2}
+= 0.5 - 0.03125
+= 0.46875
+
+Step 4 — Second Interval [1, 1.25]
+
+For 1 \le x \le 1.25:
+[x] = 1 \quad \Rightarrow \quad f(x) = x - 1
+So:
+\int_{1}^{1.25} (x - 1) \, dx
+= \left[ \frac{x^2}{2} - x \right]_{1}^{1.25}
+= \left(0.78125 - 1.25\right) - \left(0.5 - 1\right)
+= -0.46875 - (-0.5)
+= 0.03125
+
+Step 5 — Adding Both Parts
+
+\text{Total} = 0.46875 + 0.03125 = 0.50$
+\end{document}
