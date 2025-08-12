@@ -29,22 +29,22 @@ $$\textbf{\Huge GATE EE 2018  PAPER}$$
 \section*{Question}
 
 Let \(f\) be a real-valued function defined by
-\[
+$$
 f(x)=x-\lfloor x\rfloor,
-\]
+$$
 where \(\lfloor x\rfloor\) denotes the greatest integer less than or equal to \(x\). Compute
-\[
+$$
 \int_{0.25}^{1.25} f(x)\,dx
-\]
+$$
 (give the answer up to two decimal places).
 
 \section*{Solution}
 
 The function \(f(x)=x-\lfloor x\rfloor\) is the fractional part of \(x\). Split the integration interval at the integer \(x=1\):
-\[
+$$
 \int_{0.25}^{1.25} f(x)\,dx
 =\int_{0.25}^{1} f(x)\,dx + \int_{1}^{1.25} f(x)\,dx.
-\]
+$$
 
 For \(0.25\le x<1\), \(\lfloor x\rfloor=0\) so \(f(x)=x\).  
 For \(1\le x\le 1.25\), \(\lfloor x\rfloor=1\) so \(f(x)=x-1\).
@@ -64,9 +64,8 @@ Thus
 \end{align*}
 
 Adding both parts:
-\[
+$$
 \int_{0.25}^{1.25} f(x)\,dx = 0.46875 + 0.03125 = 0.5.
-\]
-
+$$
 Therefore, up to two decimal places, the value is \(\boxed{0.50}\).
 \end{document}
