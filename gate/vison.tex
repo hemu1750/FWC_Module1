@@ -22,50 +22,26 @@
 }
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot[c]{\thepage}
-\vspace{1cm}
+\vspace*{0.1cm}
 \begin{center}
-$$\textbf{\Huge GATE EE 2018  PAPER}$$
+\textbf{\Huge GATE EE 2018  PAPER}
 \end{center}
-\section*{Question}
-
-Let \(f\) be a real-valued function defined by
-$$
-f(x)=x-\lfloor x\rfloor,
-$$
-where \(\lfloor x\rfloor\) denotes the greatest integer less than or equal to \(x\). Compute
-$$
-\int_{0.25}^{1.25} f(x)\,dx
-$$
-(give the answer up to two decimal places).
-
-\section*{Solution}
-
-The function \(f(x)=x-\lfloor x\rfloor\) is the fractional part of \(x\). Split the integration interval at the integer \(x=1\):
-$$
-\int_{0.25}^{1.25} f(x)\,dx
-=\int_{0.25}^{1} f(x)\,dx + \int_{1}^{1.25} f(x)\,dx.
-$$
-
-For \(0.25\le x<1\), \(\lfloor x\rfloor=0\) so \(f(x)=x\).  
-For \(1\le x\le 1.25\), \(\lfloor x\rfloor=1\) so \(f(x)=x-1\).
-
-Thus
-\begin{align*}
-\int_{0.25}^{1} f(x)\,dx &= \int_{0.25}^{1} x\,dx
-= \left.\frac{x^2}{2}\right|_{0.25}^{1}
-= \frac{1^2}{2}-\frac{0.25^2}{2}
-= \frac{1}{2}-\frac{0.0625}{2}
-= 0.5-0.03125 = 0.46875, \\[6pt]
-\int_{1}^{1.25} f(x)\,dx &= \int_{1}^{1.25} (x-1)\,dx
-= \left(\left.\frac{x^2}{2}\right|_{1}^{1.25}\right) - (1.25-1) \\
-&= \left(\frac{1.5625}{2}-\frac{1}{2}\right)-0.25
-= (0.78125-0.5)-0.25
-= 0.28125-0.25 = 0.03125.
-\end{align*}
-
-Adding both parts:
-$$
-\int_{0.25}^{1.25} f(x)\,dx = 0.46875 + 0.03125 = 0.5.
-$$
-Therefore, up to two decimal places, the value is \(\boxed{0.50}\).
+\section*{Question 18}
+\begin{itemize}[label={},leftmargin=0pt]
+\item Let $f$ be a real-valued function of a real variable defined as
+\item $f(x) = x - \lfloor x \rfloor,$
+\item where $\lfloor x \rfloor$ denotes the largest integer less than or equal to $x$.  
+\item Compute
+\item $\int_{0.25}^{1.25} f(x)\, dx$ (up to 2 decimal places).
+\section*{\textcolor{blue}{Solution}}
+    \item Lets splite the integral
+    \item  $\int_{0.25}^{1.25} (x - \lfloor x \rfloor) \, dx = \int_{0.25}^{1} x \, dx + \int_{1}^{1.25} (x - 1) \, dx$
+    \item Lets compute 1st part of intergal
+    \item $\int_{0.25}^{1} x \, dx = \left. \frac{x^2}{2} \right|_{0.25}^{1} = \frac{1}{2} - \frac{0.25^2}{2} = 0.5 - 0.03125 = 0.46875$
+    \item Lets compute 2nd part of integral
+    \item $\int_{1}^{1.25} (x - 1) \, dx = \left. \frac{x^2}{2} \right|_{1}^{1.25} - \left. x \right|_{1}^{1.25} = (0.78125 - 0.5) - 0.25 = 0.03125$
+    \item Add the individually computed values.
+    \item $\int_{0.25}^{1.25} f(x) \, dx = 0.46875 + 0.03125 = 0.5$
+    \item The final answer is $\boxed{0.50}$
+\end{itemize}
 \end{document}
